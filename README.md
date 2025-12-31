@@ -12,3 +12,4 @@
 ## Goal
 
 Become job-ready for a junior full stack position
+Trying new things to create conflict
