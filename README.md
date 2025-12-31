@@ -12,4 +12,4 @@
 ## Goal
 
 Become job-ready for a junior full stack position
-Daily focus: shipping small changes.
+Do whatever so we create conflict
