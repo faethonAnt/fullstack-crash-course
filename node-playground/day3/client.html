@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <body>
+    <button id="btn">Call /echo</button>
+    <pre id="out"></pre>
+
+    <script>
+      document.getElementById("btn").onclick = async () => {
+        const res = await fetch("http://localhost:3000/echo", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ from: "browser", ts: Date.now() }),
+        });
+        const data = await res.json();
+        document.getElementById("out").textContent = JSON.stringify(data, null, 2);
+      };
+    </script>
+  </body>
+</html>
