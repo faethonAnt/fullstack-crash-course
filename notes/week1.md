@@ -24,3 +24,9 @@
 - loading state
 - Error state
 - console check
+
+## Day 5
+
+- Got a 400 bad request code
+- Why we return structured validation codes
+- frontend error mapping to fields
