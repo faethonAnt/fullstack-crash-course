@@ -34,6 +34,28 @@ app.post("/echo", (req, res) => {
   });
 });
 
+app.post("/signup", (req, res) => {
+  const { email, password } = req.body || {};
+
+  const errors = {};
+  if (!email || typeof email !== "string" || !email.includes("@")) {
+    errors.email = "Valid email is required";
+  }
+  if (!password || typeof password !== "string" || password.length < 8) {
+    errors.password = "Password must be at least 8 characters";
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return res.status(400).json({ error: "Validation failed", errors });
+  }
+
+  // simulate created user
+  return res.status(201).json({
+    message: "User created",
+    user: { id: Date.now(), email },
+  });
+});
+
 // 3) Auth simulation
 app.get("/private", (req, res) => {
   const auth = req.headers.authorization;
