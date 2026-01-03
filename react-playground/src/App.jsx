@@ -1,4 +1,7 @@
 import { useState } from "react";
+import InputField from "./components/InputField";
+import ErrorMessage from "./components/ErrorMessage";
+import SuccessMessage from "./components/SuccessMessage";
 
 export default function App() {
   const [email, setEmail] = useState("");
@@ -46,46 +49,33 @@ export default function App() {
 
   return (
     <div style={{ padding: 24, maxWidth: 420 }}>
-      <h1>Day 5 – POST + Validation</h1>
+      <h1>Day 6 – Components & Props</h1>
 
       <form onSubmit={submit}>
-        <div style={{ marginBottom: 12 }}>
-          <label>Email</label>
-          <input
-            style={{ display: "block", width: "100%", padding: 8 }}
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="test@example.com"
-          />
-          {fieldErrors.email && (
-            <p style={{ color: "red", margin: "6px 0 0" }}>{fieldErrors.email}</p>
-          )}
-        </div>
+        <InputField
+          label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="test@example.com"
+          error={fieldErrors.email}
+        />
 
-        <div style={{ marginBottom: 12 }}>
-          <label>Password</label>
-          <input
-            type="password"
-            style={{ display: "block", width: "100%", padding: 8 }}
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="min 8 chars"
-          />
-          {fieldErrors.password && (
-            <p style={{ color: "red", margin: "6px 0 0" }}>
-              {fieldErrors.password}
-            </p>
-          )}
-        </div>
+        <InputField
+          label="Password"
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="min 8 chars"
+          error={fieldErrors.password}
+        />
 
         <button disabled={loading} type="submit">
           {loading ? "Submitting..." : "Create account"}
         </button>
       </form>
 
-      {serverError && <p style={{ color: "red" }}>Error: {serverError}</p>}
-      {success && <p style={{ color: "green" }}>{success}</p>}
+      <ErrorMessage message={serverError} />
+      <SuccessMessage message={success} />
     </div>
   );
 }
-
