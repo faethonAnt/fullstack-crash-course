@@ -30,3 +30,14 @@
 - Got a 400 bad request code
 - Why we return structured validation codes
 - frontend error mapping to fields
+
+## Day 6
+
+- Starting tidying up the code
+- Abstraction
+
+## Day 7
+
+- Lifting state: State goes up in the parent and is inhereted with props
+- App.jsx becomes just an entry point
+- Make the code cleaner and more presentable
