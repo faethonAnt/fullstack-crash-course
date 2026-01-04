@@ -19,6 +19,16 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
+app.get("/users", async (req, res) => {
+  // simulate slow network/db
+  await new Promise((r) => setTimeout(r, 800));
+  res.json([
+    { id: 1, name: "Ada" },
+    { id: 2, name: "Linus" },
+    { id: 3, name: "Grace" },
+  ]);
+});
+
 // 1) Health check
 app.get("/health", (req, res) => {
   res.json({ status: "ok", time: new Date().toISOString() });
