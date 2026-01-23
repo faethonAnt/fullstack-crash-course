@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+}
+
+.todo-list {
+    background-color: green;
+    list-style-type: none;
+}
+
+.sub-item{
+    list-style-type: square;
+    
+}
+
+a:visited{
+    color: red;
+}
+a:link{
+    color:chartreuse;
+}
+a:hover{
+    color: blue;
+}
+a:focus{
+    outline: 2px;
+    color:cyan;
+}
+a:active{
+    color:darkgrey
+}
+
+.list-box {
+
+    background-color:antiquewhite;
+}
+
