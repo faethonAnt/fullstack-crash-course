@@ -10,6 +10,7 @@ body{
     cursor: pointer;
     pointer-events: auto;
     z-index: 100;
+    font-size: 1em;
 }
 #yesbtn{
     border: solid rgb(16, 172, 16);
