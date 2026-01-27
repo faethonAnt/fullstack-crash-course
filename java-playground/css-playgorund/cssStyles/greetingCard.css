@@ -16,9 +16,7 @@ section{
 section:hover{
     transform: skewX(10deg);
 }
-section:target{
-    display: block;
-}
+
 
 .card{
     background-color: white;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parent Teacher Conference Form</title>
+  <link rel="stylesheet" href="../css-playgorund/cssStyles/parentTeacher.css" />
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="title center">Parent Teacher Conference Form</h1>
+    <p class="description center">Please fill out the form below to help schedule your parent-teacher conference.</p>
+
+    <form action="">
+        <fieldset>
+            <legend>Student Information</legend>
+            <label for="student-name">Full Name: </label>
+            <input type="text" id="student-name" name="student-name" placeholder="E.g., Jane Doe" required>
+            <label for="grade">Student Grade: </label>
+            <input type="number" id="grade" name="grade" placeholder="E.g., 4" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Parent/Guardian Information</legend>
+            <label for="parent-name">Parent/Guardian Name: </label>
+            <input type="text" id="parent-name" name="parent-name" placeholder="E.g., Nancy Doe" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferred Contact Method</legend>
+            <label for="email" class="contact-method">Email: </label>
+            <input type="radio" value="email" id="email" name="contact-method" class="contact-method-radio-btn" checked>
+            <label for="phone" class="contact-method">Phone: </label>
+            <input type="radio" name="contact-method" id="phone" value="phone" class="contact-method-radio-btn">
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Notes</legend>
+            <label for="notes">Any specific concerns or topics you'd like to discuss?</label>
+            <textarea name="notes" id="notes" rows="4" cols="50"></textarea>
+        </fieldset>
+        <button class="submit-btn" type="submit">Submit Form</button>
+    </form>
+    
+
+    
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+body{
+    background-color: midnightblue;
+    color :whitesmoke;
+    text-align: center;
+}
+
+
+#yesbtn, #nobtn{
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 100;
+    font-size: 1em;
+}
+#yesbtn{
+    border: solid rgb(16, 172, 16);
+    background-color: rgb(16, 172, 16);
+    height: 100px;
+    width: 150px;
+}
+
+#nobtn{
+    border: solid red;
+    background-color: red;
+    height: 100px;
+    width:150px;
+}
+
+#ff{
+    width: 700px;
+    height: 500px;
+}
+
+#please-cat{
+    height: 200px;
+    width: 200px;
+    display:block;
+    margin-left: 44vw;
+    padding-top: 20px;
+}
+
+#punch-cat{
+    height: 200px;
+    display: none;
+    margin-left: 44vw;
+    padding-top: 20px;
+    width: 200px;
+    
+}
+
+#hihi-cat{
+    height: 200px;
+    display: none;
+    width: 200px;
+    margin-left: 44vw;
+    padding-top: 20px;
+}
+
+#tryMe, #love {
+    display: none;
+}
