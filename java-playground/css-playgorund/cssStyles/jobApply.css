@@ -1,0 +1,28 @@
+form{
+    box-shadow: 0 5px 15px black;
+    margin: 20px auto;
+}
+
+input:focus, textarea:focus{
+    border: solid green;
+}
+
+input:invalid, select:invalid, textarea:invalid{
+    border: solid red;
+}
+
+button:hover{
+    background-color: orange;
+}
+
+.radio-group:checked{
+    background-color: orange;
+
+}
+.name{
+    display: block;
+}
+
+.email{
+    display: block;
+}
